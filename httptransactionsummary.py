@@ -72,9 +72,11 @@ with open(output_filepath, 'w') as outfile:
         http_response_header_results = None
         try:
             (header, payload) = reader.next()
+            if header == None and payload == '':
+                break
             http_request_header_results = re.match(http_request_pattern, payload)  # re.match is used to deliberately search only once at the beginning of the string
             if not http_request_header_results:
-                http_response_header_results = re.match(http_response_pattern, payload)
+                http_response_headere_results = re.match(http_response_pattern, payload)
             if http_request_header_results:
                 packet = decoder.decode(payload)
                 l2 = packet.child()
