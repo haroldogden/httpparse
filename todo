@@ -1,0 +1,6 @@
+Create modules:
+  does_contain_scripttag([string]) # returns TRUE if a script tag is found in a string
+  script_var_stats([string])  #returns a list of all java script blocks' variables' counts and average lengths
+  get_magic_number([string]  #returns the first four bytes of a given string
+  consecutive_strings([string], [min], [max], [count]) #returns TRUE if there are [count] number of consecutive strings with a length between [min] and [max]
+  does_contain_encoded_chars([string]) #returns TRUE if a pattern similar to character encoding is detected
